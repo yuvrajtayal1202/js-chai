@@ -23,3 +23,17 @@
 // let accCity = true
 // accCity = null
 // console.table([accCity, typeof(accCity)])
+
+
+
+
+// ****************************Operations**************************************
+
+let value =  3
+let negvalue = -value
+// console.table([value, negvalue]);
+
+let str1 = "Hii"
+let str2 = " Yuvi"
+let str = str1 + str2 
+console.log(str)
