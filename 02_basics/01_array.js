@@ -13,10 +13,14 @@ myArr.shift() // removes value from first postion
 
 const newArr = myArr.join() // converts array to string
 const CnewArr = myArr.join('') // to remove commas
-console.log(CnewArr);
+// console.log(CnewArr);
 
 
-console.log("A ", myArr)
+
 const myn1 = myArr.slice(1,3)
+console.log("B ", myArr)
 console.log(myn1)
 
+const myn2 = myArr.splice(1,3) // removes portion
+console.log("C ", myArr)
+console.log(myn2)
