@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Unlimited Colors</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+      const body = document.querySelector("body");
+      const start = document.querySelector("#start");
+      const stop = document.querySelector("#stop");
+      let intervalId;
+
+      start.addEventListener("click", function startC() {
+        if (!intervalId) {
+          intervalId = setInterval(function () {
+            const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0")}`;
+            body.style.backgroundColor = randomColor;
+          }, 500); 
+        }
+      });
+
+      stop.addEventListener("click", function stopC() {
+        clearInterval(intervalId);
+        intervalId = null;
+        console.log("Interval cleared");
+      });
+    </script>
+  </body>
+</html>
